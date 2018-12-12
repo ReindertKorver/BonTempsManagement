@@ -3,6 +3,7 @@
     <Branding/>
     <NavBar/>
       <div class="page">
+        <!-- Router-View renders the COMPONENT that is defined in main.js files ROUTER-->
         <router-view/>
       </div>
     <btmFooter/>
@@ -38,7 +39,29 @@ export default {
 .page{
   padding: 20px;
 }
+.menu_maker{
+ display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
 
+  @media (max-width: 600px) {
+      display: grid ;
+      grid-template-columns: 100% ;
+      grid-template-rows: max-content max-content ;
+      grid-template-areas: "." ".";
+  
+  }
+}
+.menu_dishes_drinks {
+      display: grid ;
+      grid-template-columns: 100% ;
+      grid-template-rows: max-content max-content ;
+      grid-template-areas: "." ".";
+  .drinks{
+    margin-top:10px; 
+  }
+}
 
 .dishes_drinks {
   display: grid;
@@ -56,7 +79,9 @@ export default {
   }
   }
 }
-
+.pulse-loader{
+  text-align: left;
+} 
 .drinks {
 }
 .dishes {
@@ -128,5 +153,66 @@ export default {
 }
 .dish-content {
   display: block;
+}
+.menu_maker{
+.dish{
+    cursor: pointer;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+}}
+.removedish {
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  cursor: pointer;
+}
+.dish-item {
+  display: inline-block;
+}
+.removedish:hover {
+  border: 1px solid red;
+  color: red;
+}
+.drag-end {
+  border: 1px dashed #1a631a;
+  border-radius: 25px;
+  height: 80px;
+}
+#new-menu-list {
+  padding: 5px;
+}
+.control-panel div {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #1a631a;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.control-panel div:hover {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #1a631a;
+  text-align: center;
+}
+.dish.selected {
+  color: #1a631a;
+  border: 2px solid #1a631a;
+  border-radius: 10px;
+}
+.dish:hover {
+  color: #1a631a;
+  border: 1px solid #1a631a;
+  border-radius: 10px;
+}
+.new_menu {
+  padding-left: 5px;
 }
 </style>

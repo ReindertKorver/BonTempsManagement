@@ -13,7 +13,9 @@ import Menu from "./Pages/Menu";
 import Reserves from "./Pages/Reserves";
 import Dishes from "./Pages/Dishes";
 import Stock from "./Pages/Stock";
-
+//---------------
+//NOT USED ANYMORE
+//---------------
 export default {
   name: 'app',
   components:{Reserves,Menu,Dishes,Stock},
